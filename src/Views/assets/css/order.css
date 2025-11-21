@@ -1,0 +1,397 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    line-height: 1.6;
+    display: flex;
+}
+
+/* Hamburger button - Hidden by default */
+.hamburger {
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #1a202c;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    background-color: #1a202c;
+    padding: 24px 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 20px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: #a0aec0;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #ffffff;
+    padding-left: 17px;
+}
+
+.nav-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-text {
+    font-size: 18px;
+}
+
+/* Container */
+.container {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+    border-bottom: 2px solid #e8ecf1;
+}
+
+/* Header */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* spacing between header-top and subtitle */
+}
+
+.current-date {
+    font-size: 20px;
+    color: #7a8894;
+    font-weight: 500;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #7a8894;
+    font-weight: 400;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Table Styles */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table thead {
+    background-color: #f3f6f9;
+    border-bottom: 1px solid #e8ecf1;
+}
+
+.orders-table th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    color: #5a6b7a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.orders-table th:nth-child(4),
+.orders-table th:nth-child(5),
+.orders-table th:nth-child(6) {
+    text-align: center;
+}
+
+.orders-table tbody tr {
+    border-bottom: 1px solid #f0f3f7;
+    transition: background-color 0.2s ease;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.orders-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.orders-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.invoice-id {
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.amount {
+    font-weight: 500;
+    color: #3d4a5c;
+    text-align: center;
+}
+
+.total-amount {
+    font-weight: 600;
+    color: #1a202c;
+    text-align: center;
+}
+
+/* Table Footer */
+.table-footer {
+    padding: 16px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e8ecf1;
+}
+
+.record-count {
+    font-size: 13px;
+    color: #7a8894;
+    font-weight: 500;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}
+
+.empty-state h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    font-size: 14px;
+    color: #7a8894;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .container {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 30px 15px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 160px;
+        padding: 16px 0;
+    }
+
+    .sidebar-header {
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-header h2 {
+        font-size: 14px;
+    }
+
+    .nav-item {
+        padding: 10px 16px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .nav-item.active {
+        padding-left: 13px;
+    }
+
+    .nav-icon {
+        font-size: 16px;
+    }
+
+    .container {
+        margin-left: 160px;
+        width: calc(100% - 160px);
+        padding: 20px 12px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+
+    .empty-state {
+        padding: 60px 12px;
+    }
+
+    .empty-icon {
+        font-size: 40px;
+    }
+
+    .empty-state h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 140px;
+        padding: 12px 0;
+    }
+
+    .sidebar-header {
+        padding: 0 12px;
+        margin-bottom: 16px;
+    }
+
+    .sidebar-header h2 {
+        font-size: 12px;
+    }
+
+    .nav-item {
+        padding: 8px 12px;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .nav-item.active {
+        padding-left: 9px;
+    }
+
+    .nav-icon {
+        font-size: 14px;
+    }
+
+    .container {
+        margin-left: 140px;
+        width: calc(100% - 140px);
+        padding: 12px 8px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        font-size: 11px;
+        padding: 8px 4px;
+    }
+
+    .empty-state {
+        padding: 40px 8px;
+    }
+
+    .empty-icon {
+        font-size: 32px;
+    }
+
+    .empty-state h2 {
+        font-size: 16px;
+    }
+}

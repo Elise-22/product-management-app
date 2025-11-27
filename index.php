@@ -1,2 +1,2 @@
 <?php
-header('location: src/Views/Order/order.php');
+header('location: src/Views/Order/customers.php');

@@ -152,17 +152,17 @@ body {
 }
 
 /* Table Styles */
-.orders-table {
+.data-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.orders-table thead {
+.data-table thead {
     background-color: #f3f6f9;
     border-bottom: 1px solid #e8ecf1;
 }
 
-.orders-table th {
+.data-table th {
     padding: 16px;
     text-align: left;
     font-weight: 600;
@@ -172,26 +172,21 @@ body {
     letter-spacing: 0.5px;
 }
 
-.orders-table th:nth-child(4),
-.orders-table th:nth-child(5),
-.orders-table th:nth-child(6) {
-    text-align: center;
-}
 
-.orders-table tbody tr {
+.data-table tbody tr {
     border-bottom: 1px solid #f0f3f7;
     transition: background-color 0.2s ease;
 }
 
-.orders-table tbody tr:hover {
+.data-table tbody tr:hover {
     background-color: #f8fafc;
 }
 
-.orders-table tbody tr:last-child {
+.data-table tbody tr:last-child {
     border-bottom: none;
 }
 
-.orders-table td {
+.data-table td {
     padding: 14px 16px;
     font-size: 14px;
     color: #2c3e50;
@@ -205,13 +200,11 @@ body {
 .amount {
     font-weight: 500;
     color: #3d4a5c;
-    text-align: center;
 }
 
 .total-amount {
     font-weight: 600;
     color: #1a202c;
-    text-align: center;
 }
 
 /* Table Footer */
@@ -315,8 +308,8 @@ body {
         font-size: 13px;
     }
 
-    .orders-table th,
-    .orders-table td {
+    .data-table th,
+    .data-table td {
         font-size: 12px;
         padding: 10px 8px;
     }
@@ -377,8 +370,8 @@ body {
         font-size: 12px;
     }
 
-    .orders-table th,
-    .orders-table td {
+    .data-table th,
+    .data-table td {
         font-size: 11px;
         padding: 8px 4px;
     }

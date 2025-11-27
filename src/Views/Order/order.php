@@ -23,7 +23,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Management</title>
+    <title>Orders - Product Management</title>
     <link rel="icon" href="../assets/img/products.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,18 +32,9 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h2>Menu</h2>
-        </div>
-        <nav class="sidebar-nav">
-            <a href="#" class="nav-item active">
-                <span class="nav-icon"><img src="../assets/img/orders.png" height="30px" width="30px"></span>
-                <span class="nav-text">Orders</span>
-            </a>
-        </nav>
-    </div>
 
+    <?php include '../includes/sidebar.php'; ?>
+    
     <div class="container">
         <header class="header">
             <div class="header-top">
@@ -58,7 +49,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <main class="main-content">
             <?php if (!empty($orders)): ?>
                 <div class="table-wrapper">
-                    <table class="orders-table">
+                    <table class="data-table">
                         <thead>
                             <tr>
                                 <th>Invoice #</th>
@@ -99,4 +90,5 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </main>
     </div>
 </body>
+<script src="../assets/js/sidebar.js"></script>
 </html>
